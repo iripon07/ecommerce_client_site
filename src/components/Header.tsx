@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../assets/logo.png";
+import logo from "../assets/Technest (1) 16px.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
