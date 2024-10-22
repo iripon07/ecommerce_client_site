@@ -2,7 +2,6 @@ import Image from "next/image";
 import MacBook from "../../assets/macBook.webp"
 import { FaUser } from "react-icons/fa";
 import { MdBrowserUpdated } from "react-icons/md";
-import { FaAngleRight } from "react-icons/fa";
 
 const News = () => {
   return (
