@@ -20,7 +20,7 @@ const Header = () => {
             alt="Logo of this site"
           ></Image>
         </div>
-        <div className="text-white text-xl font-semibold flex space-x-4">
+        <div className="text-white text-xl font-semibold flex 2xl:space-x-8 space-x-4">
           <Link
             className={`link ${pathname === "/" ? "text-secondary" : ""}`}
             href="/"
