@@ -6,6 +6,7 @@ import Headphone from "../../assets/headphone.jpeg";
 const News = () => {
   return (
     <div>
+
       <div className="my-10 container mx-auto">
         <h3 className="text-center text-[40px] font-extrabold text-primary">
           Our <span className="text-secondary">News</span>
@@ -115,6 +116,9 @@ const News = () => {
 
          
         </div>
+
+<button className="py-3 px-6 bg-secondary text-white rounded-full mt-10 block mx-auto font-semibold text-lg hover:bg-primary hover:text-secondary duration-300">More News</button>
+
       </div>
     </div>
   );
