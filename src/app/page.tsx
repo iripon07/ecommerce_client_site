@@ -1,8 +1,11 @@
+import Feature from "@/components/Home/Feature";
+import News from "@/components/Home/News";
 
 export default function Home() {
   return (
     <div>
-      <h1>This would be a E-commerce site </h1>
+      <Feature />
+      <News />
     </div>
   );
 }
