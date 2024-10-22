@@ -1,7 +1,7 @@
 import Image from "next/image";
-import MacBook from "../../assets/macBook.webp"
 import { FaAngleRight, FaUser } from "react-icons/fa";
 import { MdBrowserUpdated } from "react-icons/md";
+import Headphone from "../../assets/headphone.jpeg";
 
 const News = () => {
   return (
@@ -11,131 +11,139 @@ const News = () => {
           Our <span className="text-secondary">News</span>
           <div className="mx-auto w-[100px] rounded-full border-4 border-secondary"></div>
         </h3>
+        <p className="text-grey text-sm font-normal text-center mt-4 mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
+          fuga quas itaque eveniet beatae optio.
+        </p>
 
-        <div className="grid grid-cols-3 gap-6">
-          <div className="p-10 rounded-2xl shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
-            <Image src={MacBook} alt="MacBook"></Image>
-            <div>
-              <h2 className="text-4xl font-bold text-primary">
+        <div className="grid grid-cols-4 gap-6 px-4">
+          <div className="rounded-2xl shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
+            <Image
+              className="mb-6 h-[300px] w-full rounded-t-2xl"
+              src={Headphone}
+              alt="Headphone"
+            ></Image>
+            <div className="px-6 pb-6">
+              <h2 className="text-3xl font-bold text-primary">
                 You will vainly look for fruit on it in autumn.
               </h2>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center justify-center">
+              <div className="mb-4 mt-6 flex items-center space-x-6 font-normal text-primary">
+                <div className="flex items-center justify-center space-x-2">
                   <FaUser />
                   <h3>Admin</h3>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center space-x-2">
                   <MdBrowserUpdated />
                   <h3>27 December, 2019</h3>
                 </div>
               </div>
-              <p>
+              <p className="text-base font-normal text-[#555]">
                 Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus
                 nisi. Praesent vitae mattis nunc, egestas viverra eros.
               </p>
 
-              <div
-                style={{ border: "1px solid green" }}
-                className="flex items-center justify-center space-x-2"
-              >
+              <div className="mt-6 flex items-center justify-start space-x-2 text-primary duration-300 hover:text-secondary">
                 <button>Read More</button>
                 <FaAngleRight />
               </div>
             </div>
           </div>
-          <div className="p-10 shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
-            <Image className="w-full" src={MacBook} alt="MacBook"></Image>
-            <div>
-              <h2 className="text-4xl font-bold text-primary">
+
+          <div className="rounded-2xl shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
+            <Image
+              className="mb-6 h-[300px] w-full rounded-t-2xl"
+              src={Headphone}
+              alt="Headphone"
+            ></Image>
+            <div className="px-6 pb-6">
+              <h2 className="text-3xl font-bold text-primary">
                 You will vainly look for fruit on it in autumn.
               </h2>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center justify-center">
+              <div className="mb-4 mt-6 flex items-center space-x-6 font-normal text-primary">
+                <div className="flex items-center justify-center space-x-2">
                   <FaUser />
                   <h3>Admin</h3>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center space-x-2">
                   <MdBrowserUpdated />
                   <h3>27 December, 2019</h3>
                 </div>
               </div>
-              <p>
+              <p className="text-base font-normal text-[#555]">
                 Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus
                 nisi. Praesent vitae mattis nunc, egestas viverra eros.
               </p>
 
-              <div
-                style={{ border: "1px solid green" }}
-                className="flex items-center justify-center space-x-2"
-              >
+              <div className="mt-6 flex items-center justify-start space-x-2 text-primary duration-300 hover:text-secondary">
                 <button>Read More</button>
                 <FaAngleRight />
               </div>
             </div>
           </div>
-          <div className="p-10 shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
-            <Image src={MacBook} alt="MacBook"></Image>
-            <div>
-              <h2 className="text-4xl font-bold text-primary">
+
+          <div className="rounded-2xl shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
+            <Image
+              className="mb-6 h-[300px] w-full rounded-t-2xl"
+              src={Headphone}
+              alt="Headphone"
+            ></Image>
+            <div className="px-6 pb-6">
+              <h2 className="text-3xl font-bold text-primary">
                 You will vainly look for fruit on it in autumn.
               </h2>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center justify-center">
+              <div className="mb-4 mt-6 flex items-center space-x-6 font-normal text-primary">
+                <div className="flex items-center justify-center space-x-2">
                   <FaUser />
                   <h3>Admin</h3>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center space-x-2">
                   <MdBrowserUpdated />
                   <h3>27 December, 2019</h3>
                 </div>
               </div>
-              <p>
+              <p className="text-base font-normal text-[#555]">
                 Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus
                 nisi. Praesent vitae mattis nunc, egestas viverra eros.
               </p>
 
-              <div
-                style={{ border: "1px solid green" }}
-                className="flex items-center justify-center space-x-2"
-              >
+              <div className="mt-6 flex items-center justify-start space-x-2 text-primary duration-300 hover:text-secondary">
                 <button>Read More</button>
                 <FaAngleRight />
               </div>
             </div>
           </div>
-          <div className="p-10 shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
-            <Image src={MacBook} alt="MacBook"></Image>
-            <div>
-              <h2 className="text-4xl font-bold text-primary">
+
+          <div className="rounded-2xl shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
+            <Image
+              className="mb-6 h-[300px] w-full rounded-t-2xl"
+              src={Headphone}
+              alt="Headphone"
+            ></Image>
+            <div className="px-6 pb-6">
+              <h2 className="text-3xl font-bold text-primary">
                 You will vainly look for fruit on it in autumn.
               </h2>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center justify-center">
+              <div className="mb-4 mt-6 flex items-center space-x-6 font-normal text-primary">
+                <div className="flex items-center justify-center space-x-2">
                   <FaUser />
                   <h3>Admin</h3>
                 </div>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center space-x-2">
                   <MdBrowserUpdated />
                   <h3>27 December, 2019</h3>
                 </div>
               </div>
-              <p>
+              <p className="text-base font-normal text-[#555]">
                 Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus
                 nisi. Praesent vitae mattis nunc, egestas viverra eros.
               </p>
 
-              <div
-                style={{ border: "1px solid green" }}
-                className="flex items-center justify-center space-x-2"
-              >
+              <div className="mt-6 flex items-center justify-start space-x-2 text-primary duration-300 hover:text-secondary">
                 <button>Read More</button>
                 <FaAngleRight />
               </div>
             </div>
           </div>
-          
-
-          <div></div>
         </div>
       </div>
     </div>
