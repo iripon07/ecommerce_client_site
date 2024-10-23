@@ -12,7 +12,7 @@ const config: Config = {
         primary: "#051922",
         secondary: "#F28123",
         grey: "#555",
-      },
+      }
     },
   },
   plugins: [],

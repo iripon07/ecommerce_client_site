@@ -1,28 +1,29 @@
 import Image from "next/image";
 import { FaAngleRight, FaUser } from "react-icons/fa";
 import { MdBrowserUpdated } from "react-icons/md";
-import Headphone from "../../assets/headphone.jpeg";
-
+const headphoneImage = "/assets/headphone.jpeg";
 const News = () => {
   return (
     <div>
-
-      <div className="my-10 container mx-auto">
+      <div className="container mx-auto my-10">
         <h3 className="text-center text-[40px] font-extrabold text-primary">
           Our <span className="text-secondary">News</span>
           <div className="mx-auto w-[100px] rounded-full border-4 border-secondary"></div>
         </h3>
-        <p className="text-grey text-sm font-normal text-center mt-4 mb-8">
+        <p className="mb-8 mt-4 text-center text-sm font-normal text-grey">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
           fuga quas itaque eveniet beatae optio.
         </p>
 
         <div className="grid grid-cols-3 gap-6 px-4">
+
           <div className="rounded-2xl shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
             <Image
               className="mb-6 h-[300px] w-full rounded-t-2xl"
-              src={Headphone}
-              alt="Headphone"
+              src={headphoneImage}
+              alt="headphoneImage"
+              width={300}
+              height={300}
             ></Image>
             <div className="px-6 pb-6">
               <h2 className="text-3xl font-bold text-primary">
@@ -53,8 +54,10 @@ const News = () => {
           <div className="rounded-2xl shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
             <Image
               className="mb-6 h-[300px] w-full rounded-t-2xl"
-              src={Headphone}
-              alt="Headphone"
+              src={headphoneImage}
+              alt="headphoneImage"
+              width={300}
+              height={300}
             ></Image>
             <div className="px-6 pb-6">
               <h2 className="text-3xl font-bold text-primary">
@@ -85,8 +88,10 @@ const News = () => {
           <div className="rounded-2xl shadow-[0px_8px_24px_#eaebed] duration-300 hover:shadow-none">
             <Image
               className="mb-6 h-[300px] w-full rounded-t-2xl"
-              src={Headphone}
-              alt="Headphone"
+              src={headphoneImage}
+              alt="headphoneImage"
+              width={300}
+              height={300}
             ></Image>
             <div className="px-6 pb-6">
               <h2 className="text-3xl font-bold text-primary">
@@ -113,12 +118,11 @@ const News = () => {
               </div>
             </div>
           </div>
-
-         
         </div>
 
-<button className="py-3 px-6 bg-secondary text-white rounded-full mt-10 block mx-auto font-semibold text-lg hover:bg-primary hover:text-secondary duration-300">More News</button>
-
+        <button className="mx-auto mt-10 block rounded-full bg-secondary px-6 py-3 text-lg font-semibold text-white duration-300 hover:bg-primary hover:text-secondary">
+          More News
+        </button>
       </div>
     </div>
   );
