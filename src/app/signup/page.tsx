@@ -31,8 +31,8 @@ const SignUp = () => {
               Email
             </label>
             <input
-              type="text"
-              placeholder="Enter your name"
+              type="email"
+              placeholder="Enter your email"
               className="w-full border-b-[1.25px] border-secondary pb-1 text-sm text-grey outline-none"
             />
           </div>
@@ -45,30 +45,25 @@ const SignUp = () => {
               Password
             </label>
             <input
-              type="text"
-              placeholder="Enter your name"
+              type="password"
+              placeholder="Enter your password"
               className="w-full border-b-[1.25px] border-secondary pb-1 text-sm text-grey outline-none"
             />
           </div>
 
-          <Link
-            className="mt-1 block text-end text-xs text-primary duration-300 hover:underline"
-            href="/"
-          >
-            Forgot Password
-          </Link>
+         
 
-          <div className="flex items-center justify-start">
+          <div className="flex items-center justify-start mt-6">
             <input className="accent-primary" type="checkbox" />
             <label className="ml-2 text-xs font-medium" htmlFor="">
-              I agree to the{" "}
+              I agree to the
               <span className="text-secondary">terms & conditions</span>
             </label>
           </div>
           <input
             type="submit"
             value="Sign up"
-            className="mt-6 w-full rounded bg-[#143645] py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
+            className="mt-3 w-full rounded bg-[#143645] py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
           />
         </form>
         <h6 className="text-center text-base font-medium text-grey">
