@@ -1,19 +1,33 @@
-
+import { loginSchema } from "@/schema/validationSchema";
+import { yupResolver } from "@hookform/resolvers/yup";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
+type FormData = {
+  email: string;
+  password: string;
+};
+
 const Login = () => {
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: yupResolver(loginSchema),
+  });
+  const onSubmit = (data: FormData) => console.log(data);
+
+
   return (
     <div className="container mx-auto my-12">
       <div className="mx-auto max-w-[450px] px-5 py-8 shadow-xl">
-        <h3 className="text-center text-4xl font-semibold uppercase">
-          Log In
-        </h3>
+        <h3 className="text-center text-4xl font-semibold uppercase">Log In</h3>
 
-        <form action="" className="my-8">
-         
-
+        <form onSubmit={handleSubmit(onSubmit)} className="my-8">
           <div className="my-6">
             <label
               className="mb-2 text-start text-[13px] text-primary"
@@ -25,7 +39,11 @@ const Login = () => {
               type="email"
               placeholder="Enter your email"
               className="w-full border-b-[1.25px] border-secondary pb-1 text-sm text-grey outline-none"
+              {...register("email")}
             />
+            {errors?.email && (
+              <p className="text-xs text-red-500">{errors.email.message}</p>
+            )}
           </div>
 
           <div>
@@ -39,7 +57,11 @@ const Login = () => {
               type="password"
               placeholder="Enter your password"
               className="w-full border-b-[1.25px] border-secondary pb-1 text-sm text-grey outline-none"
+              {...register("password")}
             />
+            {errors?.password && (
+              <p className="text-xs text-red-500">{errors.password.message}</p>
+            )}
           </div>
 
           <Link
@@ -51,7 +73,7 @@ const Login = () => {
 
           <input
             type="submit"
-            value="Sign up"
+            value="Sign in"
             className="mt-6 w-full rounded bg-[#143645] py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
           />
         </form>

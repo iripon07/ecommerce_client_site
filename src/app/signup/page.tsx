@@ -57,7 +57,7 @@ const SignUp = () => {
             <input className="accent-primary" type="checkbox" />
             <label className="ml-2 text-xs font-medium" htmlFor="">
               I agree to the
-              <span className="text-secondary">terms & conditions</span>
+              <span className="text-secondary"> terms & conditions</span>
             </label>
           </div>
           <input
