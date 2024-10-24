@@ -1,7 +1,7 @@
 const Offer = () => {
   return (
     <div className="container mx-auto">
-      <div className="bg-[url('/assets/kendall.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
+      <div   className="bg-[url('/assets/kendall.jpg')] bg-cover bg-fixed bg-center bg-no-repeat">
         <div
           style={{
             backgroundImage:
