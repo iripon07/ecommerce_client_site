@@ -93,7 +93,7 @@ const SignUp = () => {
 
           <div className="mt-6 flex items-center justify-start">
             <input
-              className="accent-primary"
+              className="accent-primary cursor-pointer"
               type="checkbox"
               {...register("acceptTerms")}
             />
@@ -111,7 +111,7 @@ const SignUp = () => {
           <input
             type="submit"
             value="Sign up"
-            className="mt-3 w-full rounded bg-[#143645] py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
+            className="mt-3 w-full cursor-pointer uppercase rounded bg-[#143645] py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
           />
         </form>
         <h6 className="text-center text-base font-medium text-grey">

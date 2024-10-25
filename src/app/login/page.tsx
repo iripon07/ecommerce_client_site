@@ -72,9 +72,9 @@ const Login = () => {
               />
               <span onClick={() => setShowPassword(!showPassword)}>
                 {showPassword ? (
-                  <FaEye className="absolute right-[5%] top-[30%]" />
+                  <FaEye className="absolute right-[5%] top-[30%] text-grey cursor-pointer" />
                 ) : (
-                  <FaEyeSlash className="absolute right-[5%] top-[30%]" />
+                  <FaEyeSlash className="absolute right-[5%] top-[30%] text-grey cursor-pointer" />
                 )}
               </span>
             </div>
@@ -93,7 +93,7 @@ const Login = () => {
           <input
             type="submit"
             value="Sign in"
-            className="mt-6 w-full rounded bg-[#143645] py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
+            className="mt-6 w-full rounded uppercase bg-[#143645] cursor-pointer py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
           />
         </form>
         <h6 className="text-center text-base font-medium text-grey">
