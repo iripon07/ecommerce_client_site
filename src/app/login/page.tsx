@@ -1,26 +1,36 @@
+"use client"
+
 import { loginSchema } from "@/schema/validationSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import { FaFacebook } from "react-icons/fa";
+import { FaEyeSlash, FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import {  FaEye  } from "react-icons/fa";
+import { useState } from "react";
 
-type FormData = {
+type LoginFormData = {
   email: string;
   password: string;
 };
 
 const Login = () => {
-
+  const [showPassword, setShowPassword] = useState(false);
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm<FormData>({
+  } = useForm<LoginFormData>({
     resolver: yupResolver(loginSchema),
   });
-  const onSubmit = (data: FormData) => console.log(data);
 
+
+  
+  const onSubmit = (data: LoginFormData) => {
+    console.log(data);
+    reset()
+  };
 
   return (
     <div className="container mx-auto my-12">
@@ -53,12 +63,21 @@ const Login = () => {
             >
               Password
             </label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              className="w-full border-b-[1.25px] border-secondary pb-1 text-sm text-grey outline-none"
-              {...register("password")}
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your password"
+                className="w-full border-b-[1.25px] border-secondary pb-1 text-sm text-grey outline-none"
+                {...register("password")}
+              />
+              <span onClick={() => setShowPassword(!showPassword)}>
+                {showPassword ? (
+                  <FaEye className="absolute right-[5%] top-[30%]" />
+                ) : (
+                  <FaEyeSlash className="absolute right-[5%] top-[30%]" />
+                )}
+              </span>
+            </div>
             {errors?.password && (
               <p className="text-xs text-red-500">{errors.password.message}</p>
             )}

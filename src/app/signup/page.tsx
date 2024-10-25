@@ -1,6 +1,34 @@
-import Link from "next/link";import { FaFacebook } from "react-icons/fa";import { FcGoogle } from "react-icons/fc";
+"use client";
+
+import { signUpSchema } from "@/schema/validationSchema";
+import { yupResolver } from "@hookform/resolvers/yup";
+import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { FaFacebook } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
+
+
+type SignUpFormData = {
+  name: string;
+  email: string;
+  password: string;
+  acceptTerms?: boolean;
+};
+
 
 const SignUp = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<SignUpFormData>({
+    resolver: yupResolver(signUpSchema),
+  });
+  const onSubmit = (data: SignUpFormData) => {
+    console.log(data);
+    reset();
+  };
   return (
     <div className="container mx-auto my-12">
       <div className="mx-auto max-w-[450px] px-5 py-8 shadow-xl">
@@ -8,7 +36,7 @@ const SignUp = () => {
           Sign Up
         </h3>
 
-        <form action="" className="my-8">
+        <form onSubmit={handleSubmit(onSubmit)} className="my-8">
           <div>
             <label
               className="mb-2 text-start text-[13px] text-primary"
@@ -17,10 +45,14 @@ const SignUp = () => {
               Name
             </label>
             <input
+              {...register("name")}
               type="text"
               placeholder="Enter your name"
               className="w-full border-b-[1.25px] border-secondary pb-1 text-sm text-grey outline-none"
             />
+            {errors?.name && (
+              <p className="text-xs text-red-500">{errors.name.message}</p>
+            )}
           </div>
 
           <div className="my-6">
@@ -31,10 +63,14 @@ const SignUp = () => {
               Email
             </label>
             <input
+              {...register("email")}
               type="email"
               placeholder="Enter your email"
               className="w-full border-b-[1.25px] border-secondary pb-1 text-sm text-grey outline-none"
-            />
+            />{" "}
+            {errors?.email && (
+              <p className="text-xs text-red-500">{errors.email.message}</p>
+            )}
           </div>
 
           <div>
@@ -45,20 +81,32 @@ const SignUp = () => {
               Password
             </label>
             <input
+              {...register("password")}
               type="password"
               placeholder="Enter your password"
               className="w-full border-b-[1.25px] border-secondary pb-1 text-sm text-grey outline-none"
-            />
+            />{" "}
+            {errors?.password && (
+              <p className="text-xs text-red-500">{errors.password.message}</p>
+            )}
           </div>
 
-         
+          <div className="mt-6 flex items-center justify-start">
+            <input
+              className="accent-primary"
+              type="checkbox"
+              {...register("acceptTerms")}
+            />
 
-          <div className="flex items-center justify-start mt-6">
-            <input className="accent-primary" type="checkbox" />
             <label className="ml-2 text-xs font-medium" htmlFor="">
               I agree to the
               <span className="text-secondary"> terms & conditions</span>
             </label>
+            {errors?.acceptTerms && (
+              <p className="text-xs text-red-500">
+                {errors.acceptTerms.message}
+              </p>
+            )}
           </div>
           <input
             type="submit"
@@ -68,7 +116,10 @@ const SignUp = () => {
         </form>
         <h6 className="text-center text-base font-medium text-grey">
           Already have an account?{" "}
-          <Link className="text-secondary hover:underline duration-300" href="/login">
+          <Link
+            className="text-secondary duration-300 hover:underline"
+            href="/login"
+          >
             Log in Now
           </Link>
         </h6>
@@ -76,7 +127,7 @@ const SignUp = () => {
           Or, sign up with
         </h5>
 
-        <div className="flex items-center justify-center gap-6 mt-6">
+        <div className="mt-6 flex items-center justify-center gap-6">
           <div className="flex cursor-pointer items-center justify-center">
             <FcGoogle className="text-2xl text-[#1877F2]" />
             <input
