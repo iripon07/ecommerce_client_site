@@ -15,7 +15,7 @@ const Testimonial = () => {
     <div className="bg-white">
       <div className="container mx-auto my-10">
         <Swiper
-        loop={true}
+          loop={true}
           slidesPerView={1}
           autoplay={{
             delay: 3000,
@@ -24,16 +24,16 @@ const Testimonial = () => {
           modules={[Autoplay]}
           className="mySwiper"
         >
-          <SwiperSlide>
+          <SwiperSlide className="p-4">
             <div>
               <div className="relative mb-[60px] flex items-center justify-center">
                 <div className="max-w-[540px] rounded-2xl bg-white px-8 py-12 shadow-[0px_1px_2px_0px_#F28123]">
                   <FaQuoteRight className="mx-auto text-6xl text-secondary" />
                   <p className="text-center text-sm font-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Corrupti earum animi id ea ipsa facilis unde magni sapiente
-                    asperiores pariatur fugit, officia provident cupiditate
-                    architecto aut aperiam fuga adipisci deleniti.
+                    An excellent eCommerce site with a wide selection of quality
+                    gadgets, fast service, and an easy-to-use interface—perfect
+                    for tech lovers and local shop owners looking to boost their
+                    sales.
                   </p>
                 </div>
                 <Image
@@ -58,10 +58,9 @@ const Testimonial = () => {
                 <div className="max-w-[540px] rounded-2xl bg-white px-8 py-12 shadow-[0px_1px_2px_0px_#F28123]">
                   <FaQuoteRight className="mx-auto text-6xl text-secondary" />
                   <p className="text-center text-sm font-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Corrupti earum animi id ea ipsa facilis unde magni sapiente
-                    asperiores pariatur fugit, officia provident cupiditate
-                    architecto aut aperiam fuga adipisci deleniti.
+                    A fantastic platform! Easy navigation, excellent product
+                    variety, and prompt delivery. Highly recommended for tech
+                    enthusiasts and small business owners alike.
                   </p>
                 </div>
                 <Image
@@ -86,10 +85,9 @@ const Testimonial = () => {
                 <div className="max-w-[540px] rounded-2xl bg-white px-8 py-12 shadow-[0px_1px_2px_0px_#F28123]">
                   <FaQuoteRight className="mx-auto text-6xl text-secondary" />
                   <p className="text-center text-sm font-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Corrupti earum animi id ea ipsa facilis unde magni sapiente
-                    asperiores pariatur fugit, officia provident cupiditate
-                    architecto aut aperiam fuga adipisci deleniti.
+                    Our go-to site for the latest gadgets. The buying process is
+                    smooth, prices are competitive, and customer support is
+                    always ready to help!
                   </p>
                 </div>
                 <Image
