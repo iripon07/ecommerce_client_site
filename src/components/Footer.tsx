@@ -15,7 +15,6 @@ const Footer = () => {
         {/* <h1>Quality Finds, Delivered with Love!</h1> */}
 
         <div
-          style={{ border: "1px solid  yellow" }}
           className="font-poppins grid grid-cols-1 justify-between gap-6 px-4 py-[150px] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
           <div>

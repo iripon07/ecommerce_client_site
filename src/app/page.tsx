@@ -11,7 +11,7 @@ export default function Home() {
       {/* <Offer /> */}
       {/* <About /> */}
       {/* <Testimonial /> */}
-      {/* <News /> */}
+      <News />
     </div>
   );
 }
