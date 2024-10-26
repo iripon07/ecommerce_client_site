@@ -74,15 +74,15 @@ const Footer = () => {
             <p className="xl:mb-6 lg:mb-5 md:mb-4 mb-3 text-base font-normal">
               Subscribe to our mailing list to get the latest updates.
             </p>
-            <form className="flex w-full items-center space-x-3">
+            <form  className="flex w-full items-center space-x-3">
               <input
                 type="text"
                 placeholder="Email"
-                className="rounded-l-xl bg-[#012738] p-4 font-medium outline-none placeholder:text-white"
+                className="rounded-l-xl w-full bg-[#012738] p-4 font-medium outline-none placeholder:text-white"
               />
               <button
                 type="submit"
-                className="rounded-r-xl bg-[#012738] p-4 text-secondary duration-300 hover:bg-secondary hover:text-black"
+                className="rounded-r-xl  bg-[#012738] p-4 text-secondary duration-300 hover:bg-secondary hover:text-black"
               >
                 <FaPaperPlane className="text-2xl" />
               </button>
