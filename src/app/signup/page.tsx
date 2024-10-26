@@ -93,7 +93,7 @@ const SignUp = () => {
 
           <div className="mt-6 flex items-center justify-start">
             <input
-              className="accent-primary cursor-pointer"
+              className="cursor-pointer accent-primary"
               type="checkbox"
               {...register("acceptTerms")}
             />
@@ -102,16 +102,14 @@ const SignUp = () => {
               I agree to the
               <span className="text-secondary"> terms & conditions</span>
             </label>
-            {errors?.acceptTerms && (
-              <p className="text-xs text-red-500">
-                {errors.acceptTerms.message}
-              </p>
-            )}
           </div>
+          {errors?.acceptTerms && (
+            <p className="text-xs text-red-500">{errors.acceptTerms.message}</p>
+          )}
           <input
             type="submit"
             value="Sign up"
-            className="mt-3 w-full cursor-pointer uppercase rounded bg-[#143645] py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
+            className="mt-3 w-full cursor-pointer rounded bg-[#143645] py-2 text-lg font-bold uppercase text-white duration-300 hover:bg-primary"
           />
         </form>
         <h6 className="text-center text-base font-medium text-grey">

@@ -13,7 +13,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <div className="bg-primary">
-      <nav className="container mx-auto flex items-center justify-between px-4">
+      <nav className="font-poppins container mx-auto flex items-center justify-between px-4">
         <div>
           <Link href="/" className="cursor-pointer">
             <Image
@@ -26,7 +26,7 @@ const Header = () => {
         </div>
 
         <div
-          className={`md:flex space-x-4 text-xl hidden font-semibold text-white 2xl:space-x-8 ${open ? " text-center space-y-4 bg-secondary top-5 border-b-[1px] border-b-red-500":""}`}
+          className={`hidden space-x-4 text-xl font-semibold text-white md:flex 2xl:space-x-8 ${open ? "top-5 space-y-4 border-b-[1px] border-b-red-500 bg-secondary text-center" : ""}`}
         >
           <Link
             className={`link ${pathname === "/" ? "text-secondary" : "duration-300 hover:text-secondary"}`}
@@ -62,6 +62,19 @@ const Header = () => {
 
         <div className="flex space-x-4 text-3xl text-secondary">
           <FaShoppingCart />
+          <Link
+            className="text-xl text-white duration-300 hover:text-secondary"
+            href="/signup"
+          >
+            Sign Up
+          </Link>
+
+          <Link
+            className="text-xl text-white duration-300 hover:text-secondary"
+            href="/login"
+          >
+            Login
+          </Link>
 
           <div className="block md:hidden">
             {open ? (

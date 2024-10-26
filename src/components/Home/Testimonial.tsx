@@ -51,7 +51,7 @@ const Testimonial = () => {
               </h6>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="p-4">
             {" "}
             <div>
               <div className="relative mb-[60px] flex items-center justify-center">
@@ -78,7 +78,7 @@ const Testimonial = () => {
               </h6>
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="p-4">
             {" "}
             <div>
               <div className="relative mb-[60px] flex items-center justify-center">
