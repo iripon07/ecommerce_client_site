@@ -74,7 +74,7 @@ const Footer = () => {
             <p className="xl:mb-6 lg:mb-5 md:mb-4 mb-3 text-base font-normal">
               Subscribe to our mailing list to get the latest updates.
             </p>
-            <form className="flex items-center space-x-3">
+            <form className="flex w-full items-center space-x-3">
               <input
                 type="text"
                 placeholder="Email"
