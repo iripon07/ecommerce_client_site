@@ -6,8 +6,8 @@ const Feature = () => {
   return (
     <div>
       <div className="bg-gray-100 py-[80px]">
-        <div className="container mx-auto">
-          <div className="flex justify-between">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center flex-wrap gap-6">
             {/* Start  Free Shipping  Here*/}
             <div className="flex items-center justify-center">
               <div className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-dotted border-secondary text-secondary">
