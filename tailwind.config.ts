@@ -12,7 +12,13 @@ const config: Config = {
         primary: "#051922",
         secondary: "#F28123",
         grey: "#555",
-      }
+      },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"],
+        prostoOne: ["var(--font-prosto)", "cursive"],
+        handwriting: ["var(--font-nothing-you-could-do)", "cursive"],
+        inter: ["var(--font-inter)", "sans-serif"],
+      },
     },
   },
   plugins: [],

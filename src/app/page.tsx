@@ -7,11 +7,11 @@ import Testimonial from "@/components/Home/Testimonial";
 export default function Home() {
   return (
     <div>
-      <Feature />
-      <Offer />
-      <About/>
-      <Testimonial />
-      <News />
+      {/* <Feature /> */}
+      {/* <Offer /> */}
+      {/* <About /> */}
+      {/* <Testimonial /> */}
+      {/* <News /> */}
     </div>
   );
 }

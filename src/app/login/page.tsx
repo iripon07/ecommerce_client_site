@@ -92,7 +92,7 @@ const Login = () => {
 
           <input
             type="submit"
-            value="Sign in"
+            value="login"
             className="mt-6 w-full rounded uppercase bg-[#143645] cursor-pointer py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
           />
         </form>

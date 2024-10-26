@@ -1,8 +1,33 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import type { Metadata } from "next";
+import { Inter, Nothing_You_Could_Do, Poppins, Prosto_One } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
+
+const inter = Inter({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const nothingYouCouldDo = Nothing_You_Could_Do({
+  weight:["400"],
+  subsets:["latin"],
+  variable:'--font-nothing-you-could-do'
+})
+
+const prostoOne = Prosto_One({
+  weight:["400"],
+  subsets:["latin"],
+  variable:"--font-prosto-one"
+})
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${inter.variable} ${prostoOne.variable} ${nothingYouCouldDo.variable} antialiased`}
       >
         <Header />
         {children}
