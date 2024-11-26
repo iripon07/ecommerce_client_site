@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Offer = () => {
   return (
     <div className="container mx-auto">
@@ -26,9 +28,9 @@ const Offer = () => {
                 Buy gadgets At 20% Discount, Use Code
                 <span className="text-secondary">OFF20</span>
               </h5>
-              <button className="bg-white px-6 py-3 text-lg font-semibold text-primary duration-300 hover:bg-secondary hover:text-white">
+              <Link href="/shop" className="bg-white px-6 py-3 text-lg font-semibold ease-in text-primary duration-400 hover:bg-secondary hover:text-white">
                 Shop Now
-              </button>
+              </Link>
             </div>
           </div>
           <div className="xl:block hidden"></div>
