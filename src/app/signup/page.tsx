@@ -2,6 +2,7 @@
 
 import { signUpSchema } from "@/schema/validationSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { FaFacebook } from "react-icons/fa";
@@ -25,7 +26,18 @@ const SignUp = () => {
   } = useForm<SignUpFormData>({
     resolver: yupResolver(signUpSchema),
   });
-  const onSubmit = (data: SignUpFormData) => {
+  const onSubmit = async (data: SignUpFormData) => {
+
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/user/create-user", data
+      );
+      console.log('Response from server', response);
+      
+    } catch (error) {
+      console.log('Error sending data', error);
+      
+    }
     console.log(data);
     reset();
   };

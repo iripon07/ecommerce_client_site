@@ -12,7 +12,7 @@ const ProductCard = ({product}:{product:IProduct}) => {
     
   return (
     <div className="rounded-md px-3 py-2 duration-300 hover:shadow-md">
-      <Image src={image} alt=" Mobile" />
+      <Image src={image} alt=" Mobile"  width={400} height={400} quality={100}/>
 
       <div className="flex h-[65px] items-center">
         <p className="mt-2 text-center text-xl font-semibold text-primary">

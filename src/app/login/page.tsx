@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { loginSchema } from "@/schema/validationSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -6,8 +6,9 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { FaEyeSlash, FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import {  FaEye  } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 import { useState } from "react";
+import axios from "axios";
 
 type LoginFormData = {
   email: string;
@@ -25,11 +26,22 @@ const Login = () => {
     resolver: yupResolver(loginSchema),
   });
 
+  const onSubmit = async (data: LoginFormData) => {
 
-  
-  const onSubmit = (data: LoginFormData) => {
-    console.log(data);
-    reset()
+    console.log('data from fromnt', data);
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/v1/user/login",
+        data,
+      );
+      console.log("Response from backend:", response.data);
+      alert("Data sent successfully!");
+    } catch (error) {
+      console.error("Error sending data:", error);
+      alert("Failed to send data!");
+    }
+    
+    reset();
   };
 
   return (
@@ -72,9 +84,9 @@ const Login = () => {
               />
               <span onClick={() => setShowPassword(!showPassword)}>
                 {showPassword ? (
-                  <FaEye className="absolute right-[5%] top-[30%] text-grey cursor-pointer" />
+                  <FaEye className="absolute right-[5%] top-[30%] cursor-pointer text-grey" />
                 ) : (
-                  <FaEyeSlash className="absolute right-[5%] top-[30%] text-grey cursor-pointer" />
+                  <FaEyeSlash className="absolute right-[5%] top-[30%] cursor-pointer text-grey" />
                 )}
               </span>
             </div>
@@ -93,7 +105,7 @@ const Login = () => {
           <input
             type="submit"
             value="login"
-            className="mt-6 w-full rounded uppercase bg-[#143645] cursor-pointer py-2 text-lg font-bold text-white duration-300 hover:bg-primary"
+            className="mt-6 w-full cursor-pointer rounded bg-[#143645] py-2 text-lg font-bold uppercase text-white duration-300 hover:bg-primary"
           />
         </form>
         <h6 className="text-center text-base font-medium text-grey">
