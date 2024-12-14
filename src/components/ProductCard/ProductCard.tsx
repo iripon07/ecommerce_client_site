@@ -1,22 +1,32 @@
 import Image from "next/image";
 
-
-interface IProduct {
-  title: string;
-  price: number;
-  image: string;
+export interface IImage {
+  alt: string;
+  url: string;
+  _id: string;
 }
 
-const ProductCard = ({product}:{product:IProduct}) => {
-    const {  title, price, image} = product;
-    
+interface IProduct {
+  name: string;
+  price: number;
+  images: IImage[];
+}
+
+const ProductCard = ({ product }: { product: IProduct }) => {
+  const { name, price, images } = product;
+
+  console.log("Image check", images);
+
+  const image = images[0].url;
+  console.log("images check first", image);
+
   return (
     <div className="rounded-md px-3 py-2 duration-300 hover:shadow-md">
-      <Image src={image} alt=" Mobile"  width={400} height={400} quality={100}/>
+      <Image src={image} alt=" Mobile" width={400} height={400} quality={100} />
 
       <div className="flex h-[65px] items-center">
         <p className="mt-2 text-center text-xl font-semibold text-primary">
-         {title}
+          {name}
         </p>
       </div>
       <p className="my-1 text-center text-lg font-medium text-secondary">
@@ -35,6 +45,6 @@ const ProductCard = ({product}:{product:IProduct}) => {
       </div>
     </div>
   );
-}
+};
 
-export default ProductCard
+export default ProductCard;
